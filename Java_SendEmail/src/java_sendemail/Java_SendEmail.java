@@ -29,6 +29,9 @@ public class Java_SendEmail {
         // TODO code application logic here
         try {
              // Authenticated and send mail
+             // Please reconfigure the information
+             // relevant to your mail delivery service
+             
              Properties props = System.getProperties();
              props.put("mail.smtp.host", "smtp.gmail.com");
              props.put("mail.smtp.port", "587");
@@ -45,14 +48,16 @@ public class Java_SendEmail {
                  public PasswordAuthentication getPasswordAuthentication() {
                      return new PasswordAuthentication
                         (
-                                // Tài khoản và mật khẩu gửi thư gmail.
-                                // Bật xác minh hai bước cho tài khoản google
-                                // sau đó tạo mật khẩu ứng dụng nhập vào đây.
+                            // Mail account and password.
+                            // If you use Gmail, please turn on 2-step verification:
+                            // https://myaccount.google.com/security/signinoptions/two-step-verification
+                            // Then create an application password and enter it below
+                            // https://security.google.com/settings/security/apppasswords
                                 
-                                // Địa chỉ gmail
-                                "itshare.online@gmail.com",
-                                // Mật khẩu ứng dụng
-                                "sgmcnudwbenksxto"
+                            // Email address
+                            "YourName@gmail.com",
+                            // Application password
+                            "YourAppPass"
                         );
                  }
              };
@@ -62,30 +67,28 @@ public class Java_SendEmail {
  
              msg.setFrom(new InternetAddress
                 (
-                        // Gửi Email đi từ địa chỉ này
-                        "ITShare.Online Channel<itshare.online@gmail.com>"
+                        // Send an email from this address
+                        "YourName@email.com"
                 )
              );
              msg.setSubject(
-                     // Tiêu đề Email
-                     "Anh Nhớ Em"
+                     // Email Subject
+                     "Your Subject"
              );
              msg.setRecipient(Message.RecipientType.TO, new InternetAddress
                 (
-                        // Địa chỉ người nhận
-                        "Nguyen Hong The<honggiatamthieu@gmail.com>"
+                        // Receiver's address
+                        "ITShare.Online Channel<itshare.online@gmail.com>>"
                 )
              );
              msg.setContent
                 (
-                        // Nội dung lời nhắn, dạng String
+                        // Message body, String type
                         "<h1>Hello ! How are you ?</h1>"
                                 + "<br /><br />"
-                                + "Khỏe cái bép!"
+                                + "Nice to meet you!"
                                 + "<br /><br />"
-                                + "Ờ"
-                                + "<br /><br />"
-                                + "<p>Tạm Biệt!</p>",
+                                + "<p>Goodbye!</p>",
                         "text/html; charset=UTF-8"
                 );
  
@@ -94,6 +97,7 @@ public class Java_SendEmail {
          } catch (MessagingException ex) {
              System.out.print(ex.toString());
          }
+         
     }
     
 }
