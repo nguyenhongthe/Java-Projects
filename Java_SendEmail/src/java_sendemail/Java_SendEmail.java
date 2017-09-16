@@ -7,7 +7,7 @@ package Java_SendEmail;
 
 /**
  *
- * @author Hong Tam
+ * @author Nguyen Hong The
  */
 
 import java.util.Properties;
@@ -62,7 +62,8 @@ public class Java_SendEmail {
  
              msg.setFrom(new InternetAddress
                 (
-                    "ITShare.Online Channel<itshare.online@gmail.com>"
+                        // Gửi Email đi từ địa chỉ này
+                        "ITShare.Online Channel<itshare.online@gmail.com>"
                 )
              );
              msg.setSubject(
@@ -72,7 +73,7 @@ public class Java_SendEmail {
              msg.setRecipient(Message.RecipientType.TO, new InternetAddress
                 (
                         // Địa chỉ người nhận
-                        "Nguyen Hong The<honggiatamthieu@yahoo.com>"
+                        "Nguyen Hong The<honggiatamthieu@gmail.com>"
                 )
              );
              msg.setContent
