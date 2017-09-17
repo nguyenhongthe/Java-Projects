@@ -43,9 +43,9 @@ public class Java_SendEmail {
                            // https://security.google.com/settings/security/apppasswords
                                
                            // Email address
-                           "itshare.online@gmail.com",
+                           "YourName@gmail.com",
                            // Application password
-                           "sgmcnudwbenksxto"
+                           "YourAppPass"
                        );
                 }
             };
@@ -56,7 +56,7 @@ public class Java_SendEmail {
             msg.setFrom(new InternetAddress
                (
                        // Send an email from this address
-                       "ITShare.Online Channel<itshare.online@gmail.com>"
+                       "YourName<YourName@gmail.com>"
                )
             );
             msg.setSubject(
@@ -66,7 +66,7 @@ public class Java_SendEmail {
             msg.setRecipient(Message.RecipientType.TO, new InternetAddress
                (
                        // Receiver's address
-                       "Le Duy<duylucky2014@gmail.com>"
+                       "ITShare.Online Channel<itshare.online@gmail.com>"
                )
             );
             msg.setContent
