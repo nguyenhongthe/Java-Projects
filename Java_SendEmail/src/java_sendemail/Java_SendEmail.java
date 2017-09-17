@@ -78,7 +78,7 @@ public class Java_SendEmail {
              msg.setRecipient(Message.RecipientType.TO, new InternetAddress
                 (
                         // Receiver's address
-                        "ITShare.Online Channel<itshare.online@gmail.com>>"
+                        "ITShare.Online Channel<itshare.online@gmail.com>"
                 )
              );
              msg.setContent
